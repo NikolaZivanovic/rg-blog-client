@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - CHANGELOG.md for tracking changes
 - VERSIONING.md - explaining how to version the application
 - SLINGSHOT.md - Starter kit used for this application
+- Ajax.util & Ajax
+- Lodash 
+- Config file
 
 ### Changed
 - README.md - updated with Initial Setup section and Changelog guideline
+
