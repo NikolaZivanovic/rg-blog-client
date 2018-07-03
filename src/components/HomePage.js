@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {Card, CardTitle, CardText} from 'material-ui/Card';
+import Posts from "./posts/Posts";
 
 const HomePage = () => {
   return (
@@ -14,9 +15,11 @@ const HomePage = () => {
                 Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
             </CardText>
             <Link to="/">Read more</Link>
+            <Posts/>
         </Card>
     </div>
   );
 };
 
 export default HomePage;
+
