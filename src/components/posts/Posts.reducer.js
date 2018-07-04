@@ -1,4 +1,4 @@
-import actionTypes from './posts.actionTypes';
+import actionTypes from './Posts.actionTypes';
 
 const INITIAL_STATE = {
     isLoading: false,

@@ -1,4 +1,4 @@
-import actionTypes from './posts.actionTypes';
+import actionTypes from './Posts.actionTypes';
 import Ajax from '../../utils/Ajax';
 
 const GET_ALL_POSTS_URL = "blogPosts.json";
