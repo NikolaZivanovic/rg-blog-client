@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {getAllPostsData} from "./Posts.actions";
+import Blog from '../blog/blog';
 
 
 class Posts extends Component {
@@ -21,7 +22,15 @@ class Posts extends Component {
         }
 
         const posts = this.props.posts.map( post => {
-            return <article key={post.id}>{post.title}</article>;
+            if( post.status === "published" ) {
+                return <article key={post.id}>
+                            <Blog
+                                title = {post.title}
+                                text = {post.articleText}
+                                author = {post.author}
+                            />
+                        </article>;
+            }
         } );
 
         return (
