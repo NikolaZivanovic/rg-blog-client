@@ -6,6 +6,7 @@ import NotFoundPage from "./NotFoundPage";
 import PropTypes from "prop-types";
 import React from "react";
 import { hot } from "react-hot-loader";
+import Header from "./common/Header";
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -15,12 +16,7 @@ class App extends React.Component {
   render() {
     return (
         <div>
-            <div>Roundglobe.blog</div>
-            <nav>
-                <NavLink exact to="/" >Home</NavLink>
-                <NavLink exact to="/fe" >FrontEnd</NavLink>
-                <NavLink exact to="/be" >BackEnd</NavLink>
-            </nav>
+            <Header/>
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route component={NotFoundPage} />

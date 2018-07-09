@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Storybook
 - Posts
 - blog
+- Header & Header story
 
 ### Changed
 - README.md - updated with Initial Setup section and Changelog guideline
