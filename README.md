@@ -42,9 +42,11 @@
       
 5. **`Clone project` via `git clone`**
    
-6. **Install dependencies via `npm install`**
+6. **Install global dependencies: `npm i -g yarn`**   
    
-7. **Run development server with `npm run start`**
+7. **Install dependencies via `yarn install`**
+   
+8. **Run development server with `npm run start`**
 
 
 ---
