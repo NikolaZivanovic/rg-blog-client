@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Ajax.util & Ajax
 - Lodash 
 - Config file
+- Mock all-blog-posts data
+- Storybook
+- Posts
+- blog
+- Header & Header story
 
 ### Changed
 - README.md - updated with Initial Setup section and Changelog guideline
