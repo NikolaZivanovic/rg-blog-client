@@ -10,15 +10,20 @@ const Blog = (props) => {
             <CardText>
                 {props.text}
             </CardText>
-            <CardText><Link to="/">Read more</Link></CardText>
+            {
+                props.isReadMoreVisible &&
+                <CardText><Link to={`/posts/${props.id}`}>Read more</Link></CardText>
+            }
         </Card>
     );
 };
 
 Blog.propTypes = {
+    id: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    isReadMoreVisible: PropTypes.bool,
 };
 export default Blog;
 

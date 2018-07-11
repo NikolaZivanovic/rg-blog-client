@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
-import {getAllPostsData} from "./Posts.actions";
+import {getAllPostsData} from "../Posts/Posts.actions";
 import Blog from '../blog/blog';
 
 
-class Posts extends Component {
+class PostsWidget extends Component {
 
     componentDidMount(){
         this.props.getAllPostsData();
@@ -23,13 +23,16 @@ class Posts extends Component {
 
         const posts = this.props.posts.map( post => {
             if( post.status === "published" ) {
-                return <article key={post.id}>
-                            <Blog
-                                title = {post.title}
-                                text = {post.articleText}
-                                author = {post.author}
-                            />
-                        </article>;
+                return (
+                    <Blog
+                        key={post.id}
+                        id={post.id}
+                        title={post.title}
+                        text={post.articleText}
+                        author={post.author}
+                        isReadMoreVisible
+                    />
+                );
             }
         } );
 
@@ -41,7 +44,16 @@ class Posts extends Component {
     }
 }
 
-Posts.propTypes = {
+function convertPostsObjectToArraySelector( posts ) {
+    if( !posts ){
+        return [];
+    }
+    return Object.keys(posts).map(postsId => {
+        return posts[postsId];
+    })
+}
+
+PostsWidget.propTypes = {
     getAllPostsData: PropTypes.func.isRequired,
     postsReducer: PropTypes.object.isRequired,
     posts: PropTypes.array,
@@ -50,7 +62,7 @@ Posts.propTypes = {
 const mapStateToProps = (state) => {
     return {
         postsReducer: state.posts,
-        posts: state.posts.data,
+        posts: convertPostsObjectToArraySelector(state.posts.data),
     };
 };
 
@@ -62,4 +74,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Posts);
+export default connect(mapStateToProps, mapDispatchToProps)(PostsWidget);

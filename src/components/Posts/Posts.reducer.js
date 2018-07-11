@@ -35,3 +35,4 @@ export default function GetAllPostsReducer(state = INITIAL_STATE, action ) {
             return state;
     }
 }
+
