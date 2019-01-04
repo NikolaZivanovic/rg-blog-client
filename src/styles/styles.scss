@@ -5,15 +5,14 @@ $vin-red: #ff0000;
 
 /* Styles */
 body {
-  font: 14px 'Roboto', Roboto, Arial, sans-serif;
-  line-height: 1.4em;
-  color: #4d4d4d;
-  min-width: 230px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  font-weight: 300;
+    font: 14px 'Roboto', Roboto, Arial, sans-serif;
+    line-height: 1.4em;
+    background-color: #1c232d;
+    color: #fff;
+    min-width: 230px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
 }
 
 td {

@@ -1,9 +1,9 @@
 import React from 'react';
-import Posts from "./posts/Posts";
+import PostsWidget from "./PostsWidget/PostsWidget";
 
 const HomePage = () => {
   return (
-      <Posts/>
+      <PostsWidget/>
   );
 };
 
